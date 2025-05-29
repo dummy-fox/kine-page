@@ -1,0 +1,47 @@
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.*.local
+.env.local
+
+# IDE settings
+.vscode/
+.idea/
+
+# Dependency directories
+.pnpm/
+.cache/
+*.tsbuildinfo
+
+# Test coverage
+coverage/
+
+# Local development tools
+*.local
+*.log
+
+# Others
+*.swp
+*.swo
+
+# Ocultando imagenes
+# Ignorar todas las imágenes .jpg y .png dentro de assets/images, excepto los .gitkeep
+
+/src/assets/images/**/**/*.jpg
+/src/assets/images/**/**/*.png
+!/src/assets/images/**/.gitkeep
