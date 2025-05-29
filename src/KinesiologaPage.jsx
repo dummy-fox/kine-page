@@ -32,6 +32,10 @@ const KinesiologaPage = () => {
             setShowQR(true)
             return
         }
+        setTimeout(() => {
+            const mensaje = encodeURIComponent("Hola Kine Lizza, vi tu página, realicé el pago de verificación y estoy interesad@ en una sesión.")
+            window.open(`https://wa.me/51904800405?text=${mensaje}`, '_blank')
+        }, 1000);
     }
 
     const handlePaymentConfirm = () => {
