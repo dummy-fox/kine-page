@@ -30,7 +30,7 @@ const KinesiologaPage = () => {
             return
         }
         setTimeout(() => {
-            const mensaje = encodeURIComponent("Hola Kine Lizza, vi tu página, realicé el pago de verificación y estoy interesad@ en una sesión.")
+            const mensaje = encodeURIComponent("Hola Kine Luz, vi tu página, realicé el pago de verificación y estoy interesad@ en una sesión.")
             window.open(`https://wa.me/51953102525?text=${mensaje}`, '_blank')
         }, 1000);
     }
@@ -42,8 +42,8 @@ const KinesiologaPage = () => {
         // En lugar de llamar de nuevo a handleWhatsAppClick(),
         // mejor abrir WhatsApp directamente ya que el pago fue confirmado.
         setTimeout(() => {
-            const mensaje = encodeURIComponent("Hola Kine Lizza, vi tu página, realicé el pago de verificación y estoy interesad@ en una sesión.")
-            window.open(`https://wa.me/51904800405?text=${mensaje}`, '_blank')
+            const mensaje = encodeURIComponent("Hola Kine Luz, vi tu página, realicé el pago de verificación y estoy interesad@ en una sesión.")
+            window.open(`https://wa.me/51953102525?text=${mensaje}`, '_blank')
         }, 1000);
     }
 
