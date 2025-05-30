@@ -1,3 +1,4 @@
+/* ====== CÓDIGO ORIGINAL - MANTENER EXACTO PARA PC ====== */
 * {
     margin: 0;
     padding: 0;
@@ -514,18 +515,163 @@ body {
     transform: translateY(-1px);
 }
 
+/* ====== RESPONSIVE SOLO PARA MÓVILES - NO AFECTA PC ====== */
+
+/* Tablets y pantallas medianas - Solo ajustes menores */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .container {
+        width: 95%;
+        padding: 18px;
+    }
+}
+
+/* Móviles grandes */
 @media (max-width: 480px) {
     .container {
         padding: 15px;
+        width: 98%;
+        margin: 0 auto;
     }
-
+    
+    .gradient-bg {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .main-title {
+        font-size: 1.6rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .rating {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .main-photo {
+        width: 76%;
+        height: 400px;
+    }
+    
+    .carousel-photo {
+        height: 400px;
+    }
+    
+    .photo-overlay {
+        padding: 20px;
+    }
+    
+    .overlay-content {
+        padding: 15px;
+    }
+    
+    .photo-title {
+        font-size: 1.3rem;
+    }
+    
+    .audio-section, .info-section, .carousel-section, .photo-container {
+        padding: 20px;
+    }
+    
     .info-grid {
         grid-template-columns: 1fr;
         gap: 15px;
     }
-
+    
     .audio-info {
         flex-direction: column;
         gap: 10px;
+    }
+    
+    .carousel-controls {
+        padding: 8px;
+        font-size: 1rem;
+    }
+    
+    .modal-content {
+        max-width: 320px;
+        padding: 25px;
+        margin: 20px;
+    }
+    
+    .qr-placeholder {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 360px) {
+    .container {
+        padding: 12px;
+        width: 99%;
+    }
+    
+    .gradient-bg {
+        padding: 18px;
+    }
+    
+    .main-title {
+        font-size: 1.4rem;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .main-photo {
+        width: 90%;
+        height: 350px;
+    }
+    
+    .carousel-photo {
+        height: 350px;
+    }
+    
+    .audio-section, .info-section, .carousel-section, .photo-container {
+        padding: 15px;
+    }
+    
+    .photo-overlay {
+        padding: 15px;
+    }
+    
+    .overlay-content {
+        padding: 12px;
+    }
+    
+    .photo-title {
+        font-size: 1.1rem;
+    }
+    
+    .whatsapp-btn {
+        padding: 15px;
+        font-size: 1rem;
+    }
+    
+    .modal-content {
+        max-width: 290px;
+        padding: 20px;
+        margin: 15px;
+    }
+    
+    .qr-placeholder {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .qr-icon {
+        font-size: 2.5rem;
+    }
+    
+    .carousel-controls.prev {
+        left: 5px;
+    }
+    
+    .carousel-controls.next {
+        right: 5px;
     }
 }

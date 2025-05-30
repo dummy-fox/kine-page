@@ -7,10 +7,7 @@ import Carousel from './components/Kinesiologa/Carousel'
 import InfoSection from './components/Kinesiologa/InfoSection'
 import WhatsAppSection from './components/Kinesiologa/WhatsAppSection'
 import QRModal from './components/Kinesiologa/QRModal'
-import photo1 from '@/assets/images/carousel/luz-1.jpg';
-import photo2 from '@/assets/images/carousel/luz-2.jpg';
-import photo3 from '@/assets/images/carousel/luz-3.jpg';
-import photo4 from '@/assets/images/carousel/luz-4.jpg';
+
 
 
 
@@ -20,10 +17,10 @@ const KinesiologaPage = () => {
     const [paymentVerified, setPaymentVerified] = useState(false)
 
     const photos = [
-        { src: photo1, alt: 'Foto 1' },
-        { src: photo2, alt: 'Foto 2' },
-        { src: photo3, alt: 'Foto 2' },
-        { src: photo4, alt: 'Foto 2' },
+        { src: '/luz/carousel/luz-1.jpg', alt: 'Foto 1' },
+        { src: '/luz/carousel/luz-2.jpg', alt: 'Foto 2' },
+        { src: '/luz/carousel/luz-3.jpg', alt: 'Foto 2' },
+        { src: '/luz/carousel/luz-4.jpg', alt: 'Foto 2' },
     ];
 
 
@@ -34,7 +31,7 @@ const KinesiologaPage = () => {
         }
         setTimeout(() => {
             const mensaje = encodeURIComponent("Hola Kine Lizza, vi tu página, realicé el pago de verificación y estoy interesad@ en una sesión.")
-            window.open(`https://wa.me/51911350502?text=${mensaje}`, '_blank')
+            window.open(`https://wa.me/51953102525?text=${mensaje}`, '_blank')
         }, 1000);
     }
 

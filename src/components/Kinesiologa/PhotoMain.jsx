@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import photoMain from '@/assets/images/principal/luz-main.jpg';
 import { useParams } from 'react-router-dom';
 
 const PhotoMain = () => {
@@ -26,7 +25,7 @@ const PhotoMain = () => {
             <div className="photo-container">
                 <div className="photo-frame">
                     <img
-                        src={photoMain}
+                        src='/luz/principal/luz-main.jpg'
                         alt="Kine Mía - Foto Principal"
                         className="main-photo"
                     />
