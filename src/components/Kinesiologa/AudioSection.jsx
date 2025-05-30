@@ -38,8 +38,8 @@ const AudioSection = () => {
                     className="audio-controls"
                     onLoadedMetadata={handleLoadedMetadata}
                 >
-                    <source src="/luz/audio/luz-audio.mp3" type="audio/mpeg" />
-                    <source src="/luz/audio/luz-audio.ogg" type="audio/ogg" />
+                    <source src={`/${clienteId}/audio/${clienteId}-audio.mp3`} type="audio/mpeg" />
+                    <source src={`/${clienteId}/audio/${clienteId}-audio.ogg`} type="audio/ogg" />
                     Tu navegador no soporta el elemento de audio.
                 </audio>
             </div>
