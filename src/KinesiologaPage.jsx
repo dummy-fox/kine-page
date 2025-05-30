@@ -7,6 +7,7 @@ import Carousel from './components/Kinesiologa/Carousel'
 import InfoSection from './components/Kinesiologa/InfoSection'
 import WhatsAppSection from './components/Kinesiologa/WhatsAppSection'
 import QRModal from './components/Kinesiologa/QRModal'
+import { useParams } from 'react-router-dom'
 
 
 
@@ -15,12 +16,13 @@ const KinesiologaPage = () => {
     const [currentPhoto, setCurrentPhoto] = useState(0)
     const [showQR, setShowQR] = useState(false)
     const [paymentVerified, setPaymentVerified] = useState(false)
+    const {clienteId} = useParams();
 
     const photos = [
-        { src: '/luz/carousel/luz-1.jpg', alt: 'Foto 1' },
-        { src: '/luz/carousel/luz-2.jpg', alt: 'Foto 2' },
-        { src: '/luz/carousel/luz-3.jpg', alt: 'Foto 2' },
-        { src: '/luz/carousel/luz-4.jpg', alt: 'Foto 2' },
+        { src: `/${clienteId}/carousel/${clienteId}1.jpg`, alt: 'Foto 1' },
+        { src: `/${clienteId}/carousel/${clienteId}2.jpg`, alt: 'Foto 2' },
+        { src: `/${clienteId}/carousel/${clienteId}3.jpg`, alt: 'Foto 3' },
+        { src: `/${clienteId}/carousel/${clienteId}4.jpg`, alt: 'Foto 4' },
     ];
 
 

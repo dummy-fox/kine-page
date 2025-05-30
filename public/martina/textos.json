@@ -1,0 +1,47 @@
+{
+  "mainTitle": "💋 Kine Martina",
+  "subtitle": "Déjate llevar por mis manos expertas",
+  "stars": "⭐⭐⭐⭐⭐",
+  "ratingText": "🔥 Atención 100% personalizada",
+
+
+  "__PhotoMain": "------",
+  "photoTitle": "🌹 Tu Kinesióloga Favorita",
+  "photoDescription": "Profesional, discreta y amorosa",
+  "badge1": "✨Tengo 25 años",
+  "badge2": "🔥 Blanquita",
+  "badge3": "💎 Delgada",
+  "photoNote": "* Foto real verificada - Agenda tu cita",
+
+
+  "__InfoSection": "-----",
+  "infoItems": [
+    {
+      "icon": "🏆",
+      "value": "+6 meses",
+      "label": "Experiencia"
+    },
+    {
+      "icon": "💎",
+      "value": "VIP",
+      "label": "Servicio Premium"
+    },
+    {
+      "icon": "📍",
+      "value": "Cercado",
+      "label": "Arequipa"
+    },
+    {
+      "icon": "🕐",
+      "value": "9am-8pm",
+      "label": "Lun-Sáb"
+    }
+  ],
+  "experienceTitle": "✨ Experiencia Única e inolvidable",
+  "experienceList": [
+    "Atención personalizada y discreta",
+    "Ambiente relajante y profesional",
+    "Terapias exclusivas adaptadas a ti",
+    "100% confidencial y seguro"
+  ]
+}

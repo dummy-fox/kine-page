@@ -25,8 +25,8 @@ const PhotoMain = () => {
             <div className="photo-container">
                 <div className="photo-frame">
                     <img
-                        src='/luz/principal/luz-main.jpg'
-                        alt="Kine Mía - Foto Principal"
+                        src={`/${clienteId}/principal/${clienteId}-main.jpg`}
+                        alt={data.photoTitle}
                         className="main-photo"
                     />
 

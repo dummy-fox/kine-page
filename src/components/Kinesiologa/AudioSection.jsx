@@ -1,8 +1,11 @@
 import { useState, useRef } from 'react';
+import { useParams } from 'react-router-dom';
 
 const AudioSection = () => {
     const [duration, setDuration] = useState('45 seg');
     const audioRef = useRef(null);
+
+    const { clienteId } = useParams();
 
     const formatTime = (seconds) => {
         if (!seconds || isNaN(seconds)) return '-- seg';
@@ -25,7 +28,7 @@ const AudioSection = () => {
 
     return (
         <div className="audio-section">
-            <h3 className="audio-title">🎤 Mensaje Personal de Luz</h3>
+            <h3 className="audio-title">{`🎤 Mensaje Personal de ${clienteId[0].toUpperCase() + clienteId.slice(1).toLowerCase()}`}</h3>
             <p className="audio-description">Escucha mi voz y conoce más sobre mis servicios</p>
 
             <div className="audio-container">
