@@ -25,7 +25,7 @@ const AudioSection = () => {
 
     return (
         <div className="audio-section">
-            <h3 className="audio-title">🎤 Mensaje Personal de Ariana</h3>
+            <h3 className="audio-title">🎤 Mensaje Personal de Luz</h3>
             <p className="audio-description">Escucha mi voz y conoce más sobre mis servicios</p>
 
             <div className="audio-container">
@@ -35,8 +35,8 @@ const AudioSection = () => {
                     className="audio-controls"
                     onLoadedMetadata={handleLoadedMetadata}
                 >
-                    <source src="/kine/audio/audio-ariana.mp3" type="audio/mpeg" />
-                    <source src="/kine/audio/audio-ariana.ogg" type="audio/ogg" />
+                    <source src="/luz/audio/luz-audio.mp3" type="audio/mpeg" />
+                    <source src="/luz/audio/luz-audio.ogg" type="audio/ogg" />
                     Tu navegador no soporta el elemento de audio.
                 </audio>
             </div>
@@ -52,7 +52,7 @@ const AudioSection = () => {
                 </div>
             </div>
 
-            <p className="audio-note">* Audio grabado especialmente para presentarme y generar más confianza</p>
+            <p className="audio-note">* Audio grabado especialmente para presentarme y sepan que soy real</p>
         </div>
     )
 }

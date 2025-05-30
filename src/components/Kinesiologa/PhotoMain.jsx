@@ -1,30 +1,52 @@
-import photoMain from '@/assets/images/principal/kine.jpg';
+import { useEffect, useState } from 'react';
+import photoMain from '@/assets/images/principal/luz-main.jpg';
+import { useParams } from 'react-router-dom';
 
-const PhotoMain = () => (
-    <div className="photo-main">
-        <div className="photo-container">
-            <div className="photo-frame">
-                <img
-                    src={photoMain}
-                    alt="Kine Mía - Foto Principal"
-                    className="main-photo"
-                />
+const PhotoMain = () => {
+    const [data, setData] = useState({
+        photoTitle: '',
+        photoDescription: '',
+        badge1: '',
+        badge2: '',
+        badge3: '',
+        photoNote: ''
+    });
 
-                <div className="photo-overlay">
-                    <div className="overlay-content">
-                        <h2 className="photo-title">🌹 Tu Kinesióloga Favorita</h2>
-                        <p className="photo-description">Profesional, discreta y con experiencia comprobada</p>
-                        <div className="badges">
-                            <span className="badge">✨ Premium</span>
-                            <span className="badge purple">🔥 Disponible</span>
-                            <span className="badge red">💎 VIP</span>
+    const { clienteId } = useParams();
+
+    useEffect(() => {
+        fetch(`/${clienteId}/textos.json`)
+            .then((res) => res.json())
+            .then((json) => setData(json))
+            .catch((err) => console.error('Error cargando textos:', err));
+    }, [clienteId]);
+
+    return (
+        <div className="photo-main">
+            <div className="photo-container">
+                <div className="photo-frame">
+                    <img
+                        src={photoMain}
+                        alt="Kine Mía - Foto Principal"
+                        className="main-photo"
+                    />
+
+                    <div className="photo-overlay">
+                        <div className="overlay-content">
+                            <h2 className="photo-title">{data.photoTitle}</h2>
+                            <p className="photo-description">{data.photoDescription}</p>
+                            <div className="badges">
+                                <span className="badge">{data.badge1}</span>
+                                <span className="badge purple">{data.badge2}</span>
+                                <span className="badge red">{data.badge3}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <p className="photo-note">{data.photoNote}</p>
             </div>
-            <p className="photo-note">* Foto real verificada - Se desbloquea al agendar cita</p>
         </div>
-    </div>
-);
+    );
+};
 
-export default PhotoMain
+export default PhotoMain;

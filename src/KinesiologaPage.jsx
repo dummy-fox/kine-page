@@ -7,10 +7,10 @@ import Carousel from './components/Kinesiologa/Carousel'
 import InfoSection from './components/Kinesiologa/InfoSection'
 import WhatsAppSection from './components/Kinesiologa/WhatsAppSection'
 import QRModal from './components/Kinesiologa/QRModal'
-import photo1 from '@/assets/images/carousel/martina1.jpg';
-import photo2 from '@/assets/images/carousel/martina2.jpg';
-import photo3 from '@/assets/images/carousel/martina3.jpg';
-import photo4 from '@/assets/images/carousel/martina4.jpg';
+import photo1 from '@/assets/images/carousel/luz-1.jpg';
+import photo2 from '@/assets/images/carousel/luz-2.jpg';
+import photo3 from '@/assets/images/carousel/luz-3.jpg';
+import photo4 from '@/assets/images/carousel/luz-4.jpg';
 
 
 

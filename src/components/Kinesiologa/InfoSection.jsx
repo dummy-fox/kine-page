@@ -1,38 +1,60 @@
-const InfoSection = () => (
-    <div className="info-section">
-        <div className="info-grid">
-            <div className="info-item">
-                <div className="info-icon">🏆</div>
-                <div className="info-value">+5 años</div>
-                <div className="info-label">Experiencia</div>
-            </div>
-            <div className="info-item">
-                <div className="info-icon">💎</div>
-                <div className="info-value">VIP</div>
-                <div className="info-label">Servicio Premium</div>
-            </div>
-            <div className="info-item">
-                <div className="info-icon">📍</div>
-                <div className="info-value">San Borja</div>
-                <div className="info-label">Lima</div>
-            </div>
-            <div className="info-item">
-                <div className="info-icon">🕐</div>
-                <div className="info-value">9am-8pm</div>
-                <div className="info-label">Lun-Sáb</div>
-            </div>
-        </div>
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
-        <div className="experience-box">
-            <h3 className="experience-title">✨ Experiencia Única</h3>
-            <ul className="experience-list">
-                <li>• Atención personalizada y discreta</li>
-                <li>• Ambiente relajante y profesional</li>
-                <li>• Terapias exclusivas adaptadas a ti</li>
-                <li>• 100% confidencial y seguro</li>
-            </ul>
+const InfoSection = () => {
+    const [data, setData] = useState({
+        infoItems: [
+            { icon: '🏆', value: '', label: '' },
+            { icon: '💎', value: '', label: '' },
+            { icon: '📍', value: '', label: '' },
+            { icon: '🕐', value: '', label: '' }
+        ],
+        experienceTitle: '',
+        experienceList: []
+    });
+
+    const { clienteId } = useParams();
+
+    useEffect(() => {
+        fetch(`/${clienteId}/textos.json`)
+            .then((res) => res.json())
+            .then((json) => {
+                setData({
+                    infoItems: json.infoItems ?? [
+                        { icon: '🏆', value: '', label: '' },
+                        { icon: '💎', value: '', label: '' },
+                        { icon: '📍', value: '', label: '' },
+                        { icon: '🕐', value: '', label: '' }
+                    ],
+                    experienceTitle: json.experienceTitle ?? '',
+                    experienceList: json.experienceList ?? []
+                });
+            })
+            .catch((err) => console.error('Error cargando textos:', err));
+    }, [clienteId]);
+
+    return (
+        <div className="info-section">
+            <div className="info-grid">
+                {data.infoItems.map((item, index) => (
+                    <div key={index} className="info-item">
+                        <div className="info-icon">{item.icon}</div>
+                        <div className="info-value">{item.value}</div>
+                        <div className="info-label">{item.label}</div>
+                    </div>
+                ))}
+            </div>
+
+            <div className="experience-box">
+                <h3 className="experience-title">{data.experienceTitle}</h3>
+                <ul className="experience-list">
+                    {data.experienceList.map((text, i) => (
+                        <li key={i}>• {text}</li>
+                    ))}
+                </ul>
+            </div>
         </div>
-    </div>
-);
+    );
+};
 
 export default InfoSection;

@@ -1,7 +1,7 @@
 const WhatsAppSection = ({paymentVerified,onWhatsAppClick}) => (
     <div className="whatsapp-section">
         <button className="whatsapp-btn" onClick={onWhatsAppClick}>
-            {paymentVerified ? '💬 Continuar a WhatsApp' : '💬 Escribir por WhatsApp'}
+            {paymentVerified ? '💬 Continuar a WhatsApp' : '💬 Escribir por WhatsApp para coordinar nuestro encuentro'}
         </button>
 
         {!paymentVerified && (

@@ -81,10 +81,14 @@ body {
 }
 
 .main-photo {
-    width: 100%;
-    height: 400px;
+    width: 66%;
+    height: 580px;
     object-fit: cover;
+    object-position: top;
     filter: blur(3px);
+    display: block;        /* Asegura que el margin funcione correctamente */
+    margin: 0 auto;        /* Centra horizontalmente */
+    border-radius: 8px;
 }
 
 .photo-overlay {
@@ -222,7 +226,7 @@ body {
 
 .carousel-photo {
     width: 100%;
-    height: 420px;
+    height: 600px;
     object-fit: cover;
     filter: blur(3px);
     transition: all 0.5s ease;

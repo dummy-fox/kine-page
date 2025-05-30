@@ -25,7 +25,7 @@ const Carousel = ({photos,currentPhoto,setCurrentPhoto}) => {
             <div className="carousel-overlay">
                 <div className="carousel-text">
                     <h3>🔥 Galería Privada</h3>
-                    <p>Fotos adicionales disponibles al confirmar</p>
+                    <p>+ Fotos y Videos adicionales disponibles al confirmar tu pago</p>
                 </div>
             </div>
 
