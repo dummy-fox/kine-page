@@ -55,7 +55,7 @@ const AudioSection = () => {
                 </div>
             </div>
 
-            <p className="audio-note">* Audio grabado especialmente para presentarme y sepan que soy real</p>
+            <p className="audio-note">* Audio grabado especialmente para presentarme y sepas que soy real</p>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './styles/kinesiologa.css'
 import Header from './components/Kinesiologa/Header'
 import PhotoMain from './components/Kinesiologa/PhotoMain'
@@ -17,6 +17,17 @@ const KinesiologaPage = () => {
     const [showQR, setShowQR] = useState(false)
     const [paymentVerified, setPaymentVerified] = useState(false)
     const {clienteId} = useParams();
+    const [numberWhatsapp, setNumberWhatsapp] = useState('');
+
+    useEffect(()=>{
+        fetch(`/${clienteId}/textos.json`)
+        .then((res) => res.json())
+        .then((json) => {
+            console.log(json.numberCelular);
+            setNumberWhatsapp(json.numberCelular);
+        })
+        .catch((err) => console.error('Error cargando textos:', err))
+    }, [clienteId])
 
     const photos = [
         { src: `/${clienteId}/carousel/${clienteId}1.jpg`, alt: 'Foto 1' },
@@ -32,8 +43,8 @@ const KinesiologaPage = () => {
             return
         }
         setTimeout(() => {
-            const mensaje = encodeURIComponent("Hola Kine Luz, vi tu página, realicé el pago de verificación y estoy interesad@ en una sesión.")
-            window.open(`https://wa.me/51953102525?text=${mensaje}`, '_blank')
+            const mensaje = encodeURIComponent(`Hola ${clienteId[0].toUpperCase() + clienteId.slice(1).toLowerCase()}, vi tu página, realicé el pago de verificación y estoy interesad@ en una sesión.`)
+            window.open(`https://wa.me/${numberWhatsapp}?text=${mensaje}`, '_blank')
         }, 1000);
     }
 
@@ -44,8 +55,8 @@ const KinesiologaPage = () => {
         // En lugar de llamar de nuevo a handleWhatsAppClick(),
         // mejor abrir WhatsApp directamente ya que el pago fue confirmado.
         setTimeout(() => {
-            const mensaje = encodeURIComponent("Hola Kine Luz, vi tu página, realicé el pago de verificación y estoy interesad@ en una sesión.")
-            window.open(`https://wa.me/51953102525?text=${mensaje}`, '_blank')
+            const mensaje = encodeURIComponent(`Hola ${clienteId[0].toUpperCase() + clienteId.slice(1).toLowerCase()}, vi tu página, realicé el pago de verificación y estoy interesad@ en una sesión.`)
+            window.open(`https://wa.me/${numberWhatsapp}?text=${mensaje}`, '_blank')
         }, 1000);
     }
 

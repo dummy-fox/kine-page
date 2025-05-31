@@ -1,4 +1,12 @@
 {
+  "__SEO": "--------",
+  "title": "Martina | Kinesiologa",
+  "description": "Relájate con la experiencia única de Martina. Atención personalizada y 100% confidencial.",
+  "ogImage": "/martina/principal/martina-main.jpg",
+  "favicon": "/icon.ico",
+  "keywords": "kinesiología, masajes, relajación, terapia, acompañante, amante",
+  "author": "Martina",
+
   "mainTitle": "💋 Kine Martina",
   "subtitle": "Déjate llevar por mis manos expertas",
   "stars": "⭐⭐⭐⭐⭐",
@@ -29,7 +37,7 @@
     {
       "icon": "📍",
       "value": "Cercado",
-      "label": "Arequipa"
+      "label": "Lima"
     },
     {
       "icon": "🕐",
@@ -43,5 +51,7 @@
     "Ambiente relajante y profesional",
     "Terapias exclusivas adaptadas a ti",
     "100% confidencial y seguro"
-  ]
+  ],
+
+  "numberCelular": "51924260040"
 }

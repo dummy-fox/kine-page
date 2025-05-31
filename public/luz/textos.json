@@ -1,4 +1,13 @@
 {
+    "__SEO": "--------",
+    "title": "Luz | Kinesiologa",
+    "description": "Relájate con la experiencia única de Luz. Atención personalizada y 100% confidencial.",
+    "ogImage": "/luz/principal/luz-main.jpg",
+    "favicon": "/icon.ico",
+    "keywords": "kinesiología, masajes, relajación, terapia, acompañante",
+    "author": "Luz",
+
+
     "mainTitle": "💋 Kine Luz",
     "subtitle": "Déjate llevar por mis manos expertas",
     "stars": "⭐⭐⭐⭐⭐",
@@ -43,5 +52,7 @@
         "Ambiente relajante y profesional",
         "Terapias exclusivas adaptadas a ti",
         "100% confidencial y seguro"
-    ]
+    ],
+
+    "numberCelular": "51953102525"
 }
