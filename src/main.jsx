@@ -4,6 +4,7 @@ import App from './App';
 import './index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import NotFound from './components/NotFound';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -11,7 +12,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <HelmetProvider>
       <BrowserRouter>
         <Routes>
+          <Route path='/' element={<NotFound/>}/>
           <Route path="/:clienteId" element={<App />} />
+          <Route path='*' element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>
     </HelmetProvider>

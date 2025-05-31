@@ -3,26 +3,34 @@ import KinesiologaPage from './KinesiologaPage'
 import { useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async';
 import { useState, useEffect } from 'react';
+import NotFound from './components/NotFound';
 
 function App() {
   const { clienteId } = useParams();
-  const [seoData, setSeoData] = useState(null);
+  const [data, setData] = useState(null);
+  const [notFound, setNotFound] = useState(false);
+
+
 
   useEffect(() => {
   fetch(`/${clienteId}/textos.json`)
-    .then((res) => res.json())
-    .then((json) => {
-      setSeoData(json);
+    .then((res) => {
+      if(!res.ok) throw new Error("No existe la carpeta");
+      return res.json();
     })
-    .catch((err) => console.error('Error al cargar SEO:', err));
-}, [clienteId]);
+    .then((json) => {
+      setData(json);
+    })
+    .catch(() => setNotFound(true));
+  }, [clienteId]);
 
-  if (!seoData) return <div>Cargando perfil...</div>;
+  if (notFound) return <NotFound />;
+  if (!data) return <div>Cargando perfil...</div>;
   
   return (
     <>
       <Helmet>
-        <title>{seoData.title}</title>
+        <title>{data.title}</title>
         {/* <meta name="description" content={seoData.description}/>
         <meta name="keywords" content={seoData.keywords}/>
         <meta name="author" content={seoData.author}/>
