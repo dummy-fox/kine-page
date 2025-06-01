@@ -28,7 +28,7 @@ const KinesiologaPage = ({data}) => {
 
 
     const handleWhatsAppClick = () => {
-        const mensaje = encodeURIComponent(`Hola ${clienteId[0].toUpperCase() + clienteId.slice(1).toLowerCase()}, vi tu página, realicé el pago de verificación y estoy interesad@ en una sesión.`);
+        const mensaje = encodeURIComponent(data.privateMsgWhatsApp);
         if(!data.isPaymentRequired) {
             setPaymentVerified(true);
             setTimeout(() => {
@@ -55,7 +55,7 @@ const KinesiologaPage = ({data}) => {
         // En lugar de llamar de nuevo a handleWhatsAppClick(),
         // mejor abrir WhatsApp directamente ya que el pago fue confirmado
         setTimeout(() => {
-            const mensaje = encodeURIComponent(`Hola ${clienteId[0].toUpperCase() + clienteId.slice(1).toLowerCase()}, vi tu página, realicé el pago de verificación y estoy interesad@ en una sesión.`)
+            const mensaje = encodeURIComponent(data.privateMsgWhatsApp)
             window.open(`https://wa.me/${data.phoneNumber}?text=${mensaje}`, '_blank');
         }, 1000);
     }
