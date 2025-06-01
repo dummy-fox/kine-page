@@ -18,7 +18,7 @@
     "photoTitle": "🌹 Dulce, intensa... y solo tuya por un rato",
     "photoDescription": "Profesional y discreta",
     "badge1": "✨Tengo 24 años",
-    "badge2": "🔥 Mido 1.56",
+    "badge2": "🔥 Mido 1.55",
     "badge3": "💎 Todas las poses",
     "photoNote": "* Foto real verificada - Agenda tu cita",
 
@@ -37,12 +37,12 @@
         },
         {
             "icon": "📍",
-            "value": "Cercado",
+            "value": "Todos los distritos",
             "label": "Lima"
         },
         {
             "icon": "🕐",
-            "value": "9am-8pm",
+            "value": "8am-11pm",
             "label": "Lun-Sáb"
         }
     ],
@@ -54,5 +54,8 @@
         "100% confidencial y seguro"
     ],
 
-    "numberCelular": "51912211349"
+    "phoneNumber": "51912211349",
+
+    "isPaymentRequired": false,
+    "recommendation": "Este servicio es 100% privado. Solo personas reales y con intención genuina serán atendidas"
 }

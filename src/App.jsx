@@ -50,7 +50,7 @@ function App() {
         <meta name="twitter:image" content={seoData.ogImage} /> */}
       </Helmet>
 
-      <KinesiologaPage />
+      <KinesiologaPage data={data}/>
     </>
   )
 }

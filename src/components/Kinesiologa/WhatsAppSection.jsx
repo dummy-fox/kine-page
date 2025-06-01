@@ -1,4 +1,5 @@
-const WhatsAppSection = ({paymentVerified,onWhatsAppClick}) => (
+const WhatsAppSection = ({paymentVerified,onWhatsAppClick, data}) => (
+    
     <div className="whatsapp-section">
         <button className="whatsapp-btn" onClick={onWhatsAppClick}>
             {paymentVerified ? '💬 Continuar a WhatsApp' : '💬 Escribir por WhatsApp para coordinar nuestro encuentro'}
@@ -6,7 +7,8 @@ const WhatsAppSection = ({paymentVerified,onWhatsAppClick}) => (
 
         {!paymentVerified && (
             <div className="notice-box">
-                <p><strong>💡 Recomendación:</strong> Al hacer clic se solicitará verificación de S/ 5.00</p>
+                
+                <p><strong>💡 Recomendación:</strong>{data.recommendation}</p>
                 <p style={{ fontSize: '0.8rem', marginTop: '10px' }}>Al proceder, aceptas nuestros términos de uso y políticas de privacidad</p>
             </div>
         )}

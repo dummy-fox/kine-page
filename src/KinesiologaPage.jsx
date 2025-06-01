@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './styles/kinesiologa.css'
 import Header from './components/Kinesiologa/Header'
 import PhotoMain from './components/Kinesiologa/PhotoMain'
@@ -12,22 +12,12 @@ import { useParams } from 'react-router-dom'
 
 
 
-const KinesiologaPage = () => {
+const KinesiologaPage = ({data}) => {
     const [currentPhoto, setCurrentPhoto] = useState(0)
     const [showQR, setShowQR] = useState(false)
     const [paymentVerified, setPaymentVerified] = useState(false)
     const {clienteId} = useParams();
-    const [numberWhatsapp, setNumberWhatsapp] = useState('');
-
-    useEffect(()=>{
-        fetch(`/${clienteId}/textos.json`)
-        .then((res) => res.json())
-        .then((json) => {
-            console.log(json.numberCelular);
-            setNumberWhatsapp(json.numberCelular);
-        })
-        .catch((err) => console.error('Error cargando textos:', err))
-    }, [clienteId])
+    
 
     const photos = [
         { src: `/${clienteId}/carousel/${clienteId}1.jpg`, alt: 'Foto 1' },
@@ -38,13 +28,23 @@ const KinesiologaPage = () => {
 
 
     const handleWhatsAppClick = () => {
+        const mensaje = encodeURIComponent(`Hola ${clienteId[0].toUpperCase() + clienteId.slice(1).toLowerCase()}, vi tu página, realicé el pago de verificación y estoy interesad@ en una sesión.`);
+        if(!data.isPaymentRequired) {
+            setPaymentVerified(true);
+            setTimeout(() => {
+                window.open(`https://wa.me/${data.phoneNumber}?text=${mensaje}`, '_blank');
+            }, 1000);
+
+            return;
+        }
+        
         if (!paymentVerified) {
             setShowQR(true)
             return
         }
+
         setTimeout(() => {
-            const mensaje = encodeURIComponent(`Hola ${clienteId[0].toUpperCase() + clienteId.slice(1).toLowerCase()}, vi tu página, realicé el pago de verificación y estoy interesad@ en una sesión.`)
-            window.open(`https://wa.me/${numberWhatsapp}?text=${mensaje}`, '_blank')
+            window.open(`https://wa.me/${data.phoneNumber}?text=${mensaje}`, '_blank');
         }, 1000);
     }
 
@@ -53,10 +53,10 @@ const KinesiologaPage = () => {
         setShowQR(false);
 
         // En lugar de llamar de nuevo a handleWhatsAppClick(),
-        // mejor abrir WhatsApp directamente ya que el pago fue confirmado.
+        // mejor abrir WhatsApp directamente ya que el pago fue confirmado
         setTimeout(() => {
             const mensaje = encodeURIComponent(`Hola ${clienteId[0].toUpperCase() + clienteId.slice(1).toLowerCase()}, vi tu página, realicé el pago de verificación y estoy interesad@ en una sesión.`)
-            window.open(`https://wa.me/${numberWhatsapp}?text=${mensaje}`, '_blank')
+            window.open(`https://wa.me/${data.phoneNumber}?text=${mensaje}`, '_blank');
         }, 1000);
     }
 
@@ -75,6 +75,7 @@ const KinesiologaPage = () => {
                 <WhatsAppSection
                     paymentVerified={paymentVerified}
                     onWhatsAppClick={handleWhatsAppClick}
+                    data={data}
                 />
                 <footer className="footer">
                     <p>🔒 Servicio 100% discreto y confidencial</p>

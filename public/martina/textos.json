@@ -53,5 +53,7 @@
     "100% confidencial y seguro"
   ],
 
-  "numberCelular": "51924260040"
+  "phoneNumber": "51924260040",
+  "isPaymentRequired": true,
+  "recommendation": "Al hacer clic se solicitará verificación de S/ 5.00"
 }

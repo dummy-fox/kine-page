@@ -54,5 +54,7 @@
         "100% confidencial y seguro"
     ],
 
-    "numberCelular": "51953102525"
+    "phoneNumber": "51953102525",
+    "isPaymentRequired": true,
+    "recommendation": "Al hacer clic se solicitará verificación de S/ 5.00"
 }
