@@ -1,11 +1,21 @@
 {
     "__SEO": "--------",
     "title": "Daniela | Terapia intima",
-    "description": "Relájate con la experiencia única de Daniela. Atención personalizada y 100% confidencial.",
-    "ogImage": "/daniela/principal/daniela-main.jpg",
-    "favicon": "/icon.ico",
-    "keywords": "kinesiología, masajes, relajación, terapia, Lima, acompañante",
-    "author": "Daniela",
+    "description": "Terapia íntima en Lima con Daniela. Relájate con una experiencia única, personalizada y 100% confidencial.",
+    "og": {
+    "type": "website",
+    "url": "https://kine-pagex.netlify.app/daniela",
+    "title": "Daniela | Terapia Intima",
+    "description": "🌹 Contactame, soy dulce, intensa... y solo tuya por un rato",
+    "image": "/daniela/principal/daniela-main.jpg"
+    },
+    "twitter": {
+        "card": "summary_large_image",
+        "url": "https://kine-pagex.netlify.app/daniela",
+        "title": "Daniela | Terapia Intima",
+        "description": "🌹 Contactame, soy dulce, intensa... y solo tuya por un rato",
+        "image": "/daniela/principal/daniela-main.jpg"
+    },
 
 
     "mainTitle": "💋 Daniela",
