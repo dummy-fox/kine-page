@@ -67,5 +67,6 @@
     "phoneNumber": "51912211349",
     "privateMsgWhatsApp": "Hola Daniela, vi tu página y estoy interesad@ en una sesión.",
     "isPaymentRequired": false,
-    "recommendation": "Este servicio es 100% privado. Solo personas reales y con intención genuina serán atendidas"
+    "recommendation": "Este servicio es 100% privado. Solo personas reales y con intención genuina serán atendidas",
+    "hasAudio": true
 }

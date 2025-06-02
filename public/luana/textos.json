@@ -1,0 +1,77 @@
+{
+    "__SEO": "--------",
+    "title": "Luana | Terapia intima",
+    "description": "Terapia íntima en Puno con Luana. Relájate con una experiencia única, personalizada y 100% confidencial.",
+    "og": {
+    "type": "website",
+    "url": "https://kine-pagex.netlify.app/luana",
+    "title": "Luana | Terapia Intima",
+    "description": "🌹 Contactame, soy complaciente 🌹.. Cariñosa Pasiva",
+    "image": "https://kine-pagex.netlify.app/luana/principal/luana-main.jpg"
+    },
+    "twitter": {
+        "card": "summary_large_image",
+        "url": "https://kine-pagex.netlify.app/luana",
+        "title": "Luana | Terapia Intima",
+        "description": "🌹 Contactame, soy complaciente 🌹.. Cariñosa Pasiva",
+        "image": "https://kine-pagex.netlify.app/luana/principal/luana-main.jpg"
+    },
+
+
+    "mainTitle": "💋 Luana",
+    "subtitle": "Te doy trato de pareja",
+    "stars": "⭐⭐⭐⭐⭐",
+    "ratingText": "🔥 Atención 100% personalizada",
+
+
+    "__PhotoMain": "------",
+    "photoTitle": "Complaciente 🌹.. Cariñosa Pasiva ",
+    "photoDescription": "Profesional y discreta",
+    "badge1": "✨Tengo 19 años",
+    "badge2": "🔥 Mido 1.55",
+    "badge3": "💎 Todas las poses",
+    "photoNote": "* Foto real verificada - Agenda tu cita",
+
+    
+    "__InfoSection": "-----",
+    "infoItems": [
+        {
+            "icon": "🏆",
+            "value": "Peruana",
+            "label": "Nacionalidad"
+        },
+        {
+            "icon": "💎",
+            "value": "VIP",
+            "label": "Servicio Premium"
+        },
+        {
+            "icon": "📍",
+            "value": "Todos los distritos",
+            "label": "Puno"
+        },
+        {
+            "icon": "🕐",
+            "value": "8am-11pm",
+            "label": "Lun-Dom"
+        }
+    ],
+
+    
+    "experienceTitle": "✨Sólo Para Los Amiguitos de Puno",
+    "experienceList": [
+        "Trato de pareja",
+        "Poses",
+        "Besos",
+        "Desnudita",
+        "Sin apuros"
+    ],
+
+    "phoneNumber": "51906284169",
+    "privateMsgWhatsApp": "Hola luana, vi tu página y estoy interesad@ en una sesión.",
+    "isPaymentRequired": false,
+    "recommendation": "Este servicio es 100% privado. Solo personas reales y con intención genuina serán atendidas",
+
+
+    "hasAudio": false
+}
