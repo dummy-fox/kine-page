@@ -65,7 +65,12 @@ const KinesiologaPage = ({data}) => {
             <div className="container">
                 <Header />
                 <PhotoMain />
-                <AudioSection />
+                {
+                    data.hasAudio && (
+                        <AudioSection />
+                    )
+                }
+                
                 <Carousel
                     photos={photos}
                     currentPhoto={currentPhoto}
