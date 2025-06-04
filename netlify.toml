@@ -1,0 +1,3 @@
+[build]
+  command = "node scripts/generate_routes.js && npm run build"
+  publish = "dist"
