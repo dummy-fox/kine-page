@@ -1,4 +1,4 @@
 [build]
-  command = "node scripts/generate_routes.js && npm run build"
+  command = "npm run build"
   publish = "build"
 
