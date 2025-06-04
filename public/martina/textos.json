@@ -1,11 +1,21 @@
 {
   "__SEO": "--------",
-  "title": "Martina | Kinesiologa",
-  "description": "Relájate con la experiencia única de Martina. Atención personalizada y 100% confidencial.",
-  "ogImage": "/martina/principal/martina-main.jpg",
-  "favicon": "/icon.ico",
-  "keywords": "kinesiología, masajes, relajación, terapia, acompañante, amante",
-  "author": "Martina",
+  "title": "Martina| Terapia intima",
+  "description": "Terapia íntima en Arequipa con Martina. Relájate con una experiencia única, personalizada y 100% confidencial.",
+  "og": {
+  "type": "website",
+  "url": "https://kine-pagex.netlify.app/martina",
+  "title": "Martina | Terapia Intima",
+  "description": "🌹 Contactame, soy dulce, intensa... y solo tuya por un rato",
+  "image": "https://kine-pagex.netlify.app/martina/principal/martina-main.jpg"
+  },
+  "twitter": {
+      "card": "summary_large_image",
+      "url": "https://kine-pagex.netlify.app/martina",
+      "title": "Martina | Terapia Intima",
+      "description": "🌹 Contactame, soy dulce, intensa... y solo tuya por un rato",
+      "image": "https://kine-pagex.netlify.app/martina/principal/martina-main.jpg"
+    },
 
   "mainTitle": "💋 Kine Martina",
   "subtitle": "Déjate llevar por mis manos expertas",
