@@ -1,4 +1,13 @@
-/* ====== CÓDIGO ORIGINAL - MANTENER EXACTO PARA PC ====== */
+/* ==========================================================================
+   UNIFICACIÓN DE ESTILOS
+   --------------------------------------------------------------------------
+   1) Bloque ORIGINAL de kinesiologa.css (sin tocar nada)
+   2) Bloque ORIGINAL de index.css       (sin tocar nada)
+   ========================================================================== */
+
+
+/* ====== 1) BLOQUE ORIGINAL de src/styles/kinesiologa.css ====== */
+
 * {
     margin: 0;
     padding: 0;
@@ -72,7 +81,6 @@ body {
     border-radius: 20px;
     padding: 20px;
     position: relative;
-    
 }
 
 .photo-frame {
@@ -87,8 +95,10 @@ body {
     object-fit: cover;
     object-position: top;
     filter: blur(3px);
-    display: block;        /* Asegura que el margin funcione correctamente */
-    margin: 0 auto;        /* Centra horizontalmente */
+    display: block;
+    /* Asegura que el margin funcione correctamente */
+    margin: 0 auto;
+    /* Centra horizontalmente */
     border-radius: 8px;
 }
 
@@ -532,71 +542,74 @@ body {
         width: 98%;
         margin: 0 auto;
     }
-    
+
     .gradient-bg {
         padding: 20px;
         margin-bottom: 20px;
     }
-    
+
     .main-title {
         font-size: 1.6rem;
     }
-    
+
     .subtitle {
         font-size: 1rem;
     }
-    
+
     .rating {
         gap: 10px;
         flex-wrap: wrap;
     }
-    
+
     .main-photo {
         width: 76%;
         height: 400px;
     }
-    
+
     .carousel-photo {
         height: 400px;
     }
-    
+
     .photo-overlay {
         padding: 20px;
     }
-    
+
     .overlay-content {
         padding: 15px;
     }
-    
+
     .photo-title {
         font-size: 1.3rem;
     }
-    
-    .audio-section, .info-section, .carousel-section, .photo-container {
+
+    .audio-section,
+    .info-section,
+    .carousel-section,
+    .photo-container {
         padding: 20px;
     }
-    
+
     .info-grid {
         grid-template-columns: 1fr;
         gap: 15px;
     }
-    
+
     .audio-info {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .carousel-controls {
         padding: 8px;
         font-size: 1rem;
     }
-    
+
     .modal-content {
         max-width: 320px;
         padding: 25px;
         margin: 20px;
     }
-    
+
     .qr-placeholder {
         width: 160px;
         height: 160px;
@@ -609,69 +622,227 @@ body {
         padding: 12px;
         width: 99%;
     }
-    
+
     .gradient-bg {
         padding: 18px;
     }
-    
+
     .main-title {
         font-size: 1.4rem;
     }
-    
+
     .subtitle {
         font-size: 0.9rem;
     }
-    
+
     .main-photo {
         width: 90%;
         height: 350px;
     }
-    
+
     .carousel-photo {
         height: 350px;
     }
-    
-    .audio-section, .info-section, .carousel-section, .photo-container {
+
+    .audio-section,
+    .info-section,
+    .carousel-section,
+    .photo-container {
         padding: 15px;
     }
-    
+
     .photo-overlay {
         padding: 15px;
     }
-    
+
     .overlay-content {
         padding: 12px;
     }
-    
+
     .photo-title {
         font-size: 1.1rem;
     }
-    
+
     .whatsapp-btn {
         padding: 15px;
         font-size: 1rem;
     }
-    
+
     .modal-content {
         max-width: 290px;
         padding: 20px;
         margin: 15px;
     }
-    
+
     .qr-placeholder {
         width: 140px;
         height: 140px;
     }
-    
+
     .qr-icon {
         font-size: 2.5rem;
     }
-    
+
     .carousel-controls.prev {
         left: 5px;
     }
-    
+
     .carousel-controls.next {
         right: 5px;
+    }
+}
+
+
+/* ====== 2) BLOQUE ORIGINAL de src/index.css ====== */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: transparent;
+    padding: 20px 160px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    box-sizing: content-box;
+}
+
+.desc {
+    font-style: italic;
+    color: #444;
+}
+
+.qr {
+    width: 200px;
+    margin: 10px 0;
+}
+
+.foto-container {
+    margin: 20px 0;
+}
+
+.foto-blur {
+    width: 100%;
+    filter: blur(5px);
+    border-radius: 8px;
+}
+
+.btn-wsp {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.aviso {
+    font-size: 13px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* ========================
+   ESTILOS PARA HomePage
+   ======================== */
+
+.home-container {
+    max-width: 500px;           /* Coincide con los contenedores KinX */
+    margin: 40px auto;          /* Espacio superior e inferior y centrado */
+    padding: 0 20px;            /* Pequeño padding lateral */
+    text-align: center;
+}
+
+.home-container .titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #f8bbd9;             /* Rosa suave, a juego con photo-title */
+}
+
+.home-container .subtitulo {
+    font-size: 1rem;
+    color: #fce7f3;             /* Rosa pálido */
+    margin-bottom: 20px;
+}
+
+/* Grid responsivo de tarjetas */
+.kinesiologas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+/* Tarjeta individual */
+.kinesiologa-card {
+    position: relative;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;      /* Elimina subrayado en Link */
+    color: white;               /* Texto siempre blanco */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagen dentro de la tarjeta */
+.kinesiologa-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Contenedor de texto */
+.kinesiologa-card .info {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Nombre */
+.kinesiologa-card .info h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+    color: #ec4899;             /* Rosa más intenso para destacar nombre */
+}
+
+/* Ciudad */
+.kinesiologa-card .info p {
+    font-size: 0.8rem;
+    color: #fce7f3;
+    margin: 0;
+}
+
+/* Efecto hover en tarjeta */
+.kinesiologa-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.kinesiologa-card:hover img {
+    transform: scale(1.05);
+}
+
+/* ====== Responsive adjustments (opcional) ====== */
+@media (max-width: 480px) {
+    .home-container {
+        margin: 20px auto;
+    }
+
+    .kinesiologas-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    .kinesiologa-card img {
+        height: 120px;
     }
 }
